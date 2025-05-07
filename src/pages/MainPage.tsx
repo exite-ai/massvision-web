@@ -1,9 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react'
 import '../styles/MainPage.css'
+import LogoHeader from '../components/LogoHeader'
+import logoHorizon from '../image/MASS Vision horizon.png'
+import { useNavigate } from 'react-router-dom'
 
-const MainPage: React.FC = () => {
+const MacroPage: React.FC = () => {
   const [activeTool, setActiveTool] = useState<string>('select')
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -122,9 +126,9 @@ const MainPage: React.FC = () => {
 
   return (
     <div className="main-page">
-      <header className="header">
-        <h1>MASS Vision</h1>
-      </header>
+      <LogoHeader logoSrc={logoHorizon}>
+        <button className="back-button" onClick={() => navigate('/projects')}>プロジェクト一覧に戻る</button>
+      </LogoHeader>
       <div className="main-content">
         <div className="sidebar">
           {menuItems.map((section) => (
@@ -155,8 +159,11 @@ const MainPage: React.FC = () => {
           </div>
         </div>
       </div>
+      <footer className="footer">
+        MASS Vision version 5.0 ©️S.K. / EXiTE programming.
+      </footer>
     </div>
   )
 }
 
-export default MainPage 
+export default MacroPage 

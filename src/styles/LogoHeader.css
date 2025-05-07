@@ -1,0 +1,197 @@
+.logo-header {
+  width: 100%;
+  background: #23272f;
+  color: #e0e0e0;
+  padding: 2.5rem 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #3d3d3d;
+  font-family: 'Times New Roman', Times, 'Noto Serif JP', serif;
+  box-sizing: border-box;
+}
+
+.logo-header__main {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-header__img {
+  display: block;
+  margin: 0 auto 1.2rem auto;
+  max-width: 320px;
+  max-height: 120px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  background: #23272f;
+}
+
+.logo-header__title {
+  font-size: 2.3rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2em;
+  color: #e0e0e0;
+}
+
+.logo-header__version {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #b0b8c7;
+  margin-bottom: 0.1em;
+}
+
+.logo-header__year {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #b0b8c7;
+  margin-bottom: 0.1em;
+}
+
+.logo-header__credit {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #888;
+  margin-bottom: 0.2em;
+}
+
+.logo-header__children {
+  margin-top: 1.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .logo-header {
+    padding: 1.2rem 0 0.7rem 0;
+  }
+  .logo-header__img {
+    max-width: 180px;
+    max-height: 60px;
+    margin-bottom: 0.7rem;
+  }
+  .logo-header__title {
+    font-size: 1.3rem;
+  }
+  .logo-header__version,
+  .logo-header__year,
+  .logo-header__credit {
+    font-size: 0.8rem;
+  }
+  .logo-header__children {
+    margin-top: 0.7rem;
+  }
+}
+
+.logo-header.simple-header {
+  width: 100%;
+  background: #000;
+  color: #e0e0e0;
+  padding: 0.5rem 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #3d3d3d;
+  font-family: 'Times New Roman', Times, 'Noto Serif JP', serif;
+  box-sizing: border-box;
+  min-height: 64px;
+}
+
+.simple-logo {
+  height: 64px;
+  width: auto;
+  max-width: 480px;
+  object-fit: contain;
+  background: #000;
+  border-radius: 4px;
+  box-shadow: none;
+  margin: 0;
+}
+
+.logo-header__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* タイトル画面用の中央寄せロゴ＋ボタン */
+.title-page {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-page .logo-header.simple-header {
+  background: none;
+  border-bottom: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.title-page .simple-logo {
+  max-width: 400px;
+  width: 80vw;
+  height: auto;
+  margin-bottom: 2.5rem;
+  display: block;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.start-button {
+  padding: 1rem 3.5rem;
+  font-size: 1.3rem;
+  background: #22577a;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.2s;
+  font-family: 'Noto Sans JP', 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.start-button:hover {
+  background: #183b5a;
+}
+
+@media (max-width: 600px) {
+  .logo-header.simple-header {
+    padding: 0.5rem 0.7rem;
+    min-height: 48px;
+  }
+  .simple-logo {
+    height: 40px;
+    max-width: 220px;
+  }
+  .title-page .simple-logo {
+    max-width: 95vw;
+    width: 95vw;
+    margin-bottom: 1.2rem;
+  }
+  .start-button {
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
+  }
+} 

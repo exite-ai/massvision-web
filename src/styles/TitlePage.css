@@ -1,9 +1,11 @@
 .title-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  background-color: var(--background-color);
+  width: 100vw;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .title-content {
@@ -50,4 +52,29 @@
 
 .start-button:hover {
   background-color: #0056b3;
+}
+
+.title-fadein-logo {
+  opacity: 0;
+  transition: opacity 2s cubic-bezier(0.4,0,0.2,1);
+  max-width: 80vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.title-fadein-logo.visible {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .title-fadein-logo {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
 } 
