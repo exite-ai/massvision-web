@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import projectReducer from './slices/projectSlice'
+import characterReducer from './slices/characterSlice'
 
 export const store = configureStore({
   reducer: {
     project: projectReducer,
+    character: characterReducer,
   },
 })
 
