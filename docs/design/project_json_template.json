@@ -1,0 +1,33 @@
+{
+  "id": "p1",
+  "project_name": "プロジェクト名",
+  "created_at": "2024-03-21T12:00:00.000Z",
+  "updated_at": "2024-03-21T12:00:00.000Z",
+  "characters": [
+    {
+      "id": "c1",
+      "name": "白",
+      "color": "#ffffff",
+      "initial_position": {
+        "x": 0,
+        "y": 0,
+        "angle": 0
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "name": "シーン1",
+      "count": 10,
+      "macros": [
+        {
+          "id": "m1",
+          "name": "マクロ1",
+          "script": "move c1 1 0\nrotate c1 90",
+          "assign_chara": ["c1"]
+        }
+      ]
+    }
+  ]
+} 
